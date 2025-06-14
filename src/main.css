@@ -1,0 +1,151 @@
+/* Calendar Container */
+.calendar {
+  width: 350px;
+  margin: 20px auto;
+  background: #f4f4f4;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header: Navigation & Month Title */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Weekday Labels */
+.days {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+/* Grid Rows */
+.row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+/* Grid Columns */
+.col {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Date Cells */
+.cell {
+  cursor: pointer;
+  padding: 10px;
+  min-height: 60px;
+  position: relative; /* Crucial for positioning the event dot */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Dates from another month */
+.disabled {
+  color: #ccc;
+}
+
+/* Selected Day Styling */
+.selected {
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+}
+
+/* Today Display Bar */
+.today-line {
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 6px 0;
+}
+
+/* Event Indicator Dot */
+.event-indicator {
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  /* Using absolute positioning for better control, or you can stick with margin if it works */
+  position: absolute; /* Added for precise positioning relative to the cell */
+  bottom: 5px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the dot horizontally */
+}
+
+
+/* Modal Overlay (dark background) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal Box */
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Header */
+.modal h3 {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Modal Event List */
+.modal ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Each Event Row */
+.modal li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Buttons inside Modal */
+.modal button {
+  margin-top: 10px;
+  margin-right: 5px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal button:hover {
+  background-color: #ddd;
+}
