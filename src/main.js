@@ -144,7 +144,7 @@ export default function Calendar() {
             onClick={() => handleDayClick(cloneDay)}
           >
             <span>{format(day, dateFormat)}</span>
-            {hasEvents && <div className="event-indicator"></div>} {/* Red dot indicator */}
+            {hasEvents && <div className="event-indicator"></div>}
           </div>
         );
         day = addDays(day, 1);
