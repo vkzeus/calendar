@@ -16,7 +16,7 @@ import {
 export default function Calendar() {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
-  // Initialize events from localStorage or an empty object
+
   const [events, setEvents] = useState(() => {
     try {
       const storedEvents = localStorage.getItem("calendarEvents");
