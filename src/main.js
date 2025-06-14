@@ -29,14 +29,14 @@ export default function Calendar() {
   const [showModal, setShowModal] = useState(false);
   const [modalDateKey, setModalDateKey] = useState("");
 
-  // Effect to save events to localStorage whenever the events state changes
+
   useEffect(() => {
     try {
       localStorage.setItem("calendarEvents", JSON.stringify(events));
     } catch (error) {
       console.error("Error saving events to localStorage:", error);
     }
-  }, [events]); // Dependency array: this effect runs when 'events' changes
+  }, [events]); 
 
   const handleDayClick = (day) => {
     const dateKey = format(day, "yyyy-MM-dd");
@@ -129,7 +129,7 @@ export default function Calendar() {
       for (let i = 0; i < 7; i++) {
         const cloneDay = day;
         const dateKey = format(day, "yyyy-MM-dd");
-        const hasEvents = events[dateKey]?.length > 0; // Check if there are events for this date
+        const hasEvents = events[dateKey]?.length > 0; 
 
         days.push(
           <div
