@@ -1,4 +1,4 @@
-/* Calendar Container */
+
 .calendar {
   width: 350px;
   margin: 20px auto;
@@ -9,7 +9,6 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Header: Navigation & Month Title */
 .header {
   display: flex;
   justify-content: space-between;
@@ -19,50 +18,48 @@
   font-size: 18px;
 }
 
-/* Weekday Labels */
 .days {
   font-weight: bold;
   border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
 }
 
-/* Grid Rows */
+
 .row {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
 }
 
-/* Grid Columns */
+
 .col {
   text-align: center;
   padding: 10px;
 }
 
-/* Date Cells */
 .cell {
   cursor: pointer;
   padding: 10px;
   min-height: 60px;
-  position: relative; /* Crucial for positioning the event dot */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 
-/* Dates from another month */
+
 .disabled {
   color: #ccc;
 }
 
-/* Selected Day Styling */
+
 .selected {
   background-color: #007bff;
   color: white;
   border-radius: 50%;
 }
 
-/* Today Display Bar */
+
 .today-line {
   text-align: center;
   margin: 10px 0;
@@ -73,21 +70,20 @@
   padding: 6px 0;
 }
 
-/* Event Indicator Dot */
+
 .event-indicator {
   width: 8px;
   height: 8px;
   background-color: red;
   border-radius: 50%;
-  /* Using absolute positioning for better control, or you can stick with margin if it works */
-  position: absolute; /* Added for precise positioning relative to the cell */
-  bottom: 5px; /* Adjust as needed */
+
+  position: absolute;
+  bottom: 5px;
   left: 50%;
-  transform: translateX(-50%); /* Centers the dot horizontally */
+  transform: translateX(-50%);
 }
 
 
-/* Modal Overlay (dark background) */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -101,7 +97,7 @@
   z-index: 999;
 }
 
-/* Modal Box */
+
 .modal {
   background: white;
   padding: 20px;
@@ -112,20 +108,20 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Modal Header */
+
 .modal h3 {
   margin-top: 0;
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-/* Modal Event List */
+
 .modal ul {
   list-style: none;
   padding: 0;
 }
 
-/* Each Event Row */
+
 .modal li {
   display: flex;
   justify-content: space-between;
@@ -134,7 +130,7 @@
   font-size: 14px;
 }
 
-/* Buttons inside Modal */
+
 .modal button {
   margin-top: 10px;
   margin-right: 5px;
